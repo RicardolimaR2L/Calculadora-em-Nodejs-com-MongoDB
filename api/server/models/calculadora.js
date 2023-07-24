@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const calculadoraSchema = new mongoose.Schema({
+  tipoDeOperação:String,
   expression: String,
-  result: Number,
-});
+  result: Number
+})
 
-module.exports = mongoose.model("calculadora", calculadoraSchema);
+module.exports = mongoose.model('calculadora', calculadoraSchema)

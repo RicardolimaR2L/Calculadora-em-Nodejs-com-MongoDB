@@ -1,5 +1,4 @@
 const Calculadora = require('../models/calculadora')
-
 module.exports = {
   // Rota GET para buscar todos os cálculos
   async index(request, response) {
@@ -28,25 +27,22 @@ module.exports = {
 
     // Cria uma nova instância do modelo Calculadora com os dados recebidos
     const calculo = new Calculadora({
+      tipoDeOperação,
       expressao,
       resultado
     })
 
     try {
       // Salva o cálculo no banco de dados
-      await calculo.save({
-        
-      })
+      await calculo.save({})
 
-        // Caso seja salvo com sucesso, retorna uma mensagem de sucesso com status 201
+      // Caso seja salvo com sucesso, retorna uma mensagem de sucesso com status 201
       return response
         .status(201)
-        .json({ message: 'Calculadora criada com sucesso' })
+        .json({ message: 'Calculos criada com sucesso' })
     } catch (error) {
       // Caso ocorra um erro ao salvar no banco de dados, retorna uma mensagem de erro com status 400
-      response
-        .status(400)
-        .json({ error: 'Não foi possível criar a calculadora' })
+      response.status(400).json({ error: 'Não foi possível criar os calculos' })
     }
   }
 }
