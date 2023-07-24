@@ -17,17 +17,16 @@ module.exports = {
   // Rota POST para criar um novo cálculo
   async store(request, response) {
     // Extrai a expressão e o resultado do corpo da requisição
-    const { expressao, resultado } = request.body
+    const { expressao, resultado, tipoDeOperacao } = request.body
 
     // Verifica se os dados estão corretos (não estão vazios)
-    if (!expressao || !resultado) {
+    if (!expressao || !resultado || !tipoDeOperacao) {
       // Caso algum dado esteja faltando, retorna um erro com status 400
       return response.status(400).json({ error: 'Dados de cálculos inválidos' })
     }
-
     // Cria uma nova instância do modelo Calculadora com os dados recebidos
     const calculo = new Calculadora({
-      tipoDeOperação,
+      tipoDeOperacao,
       expressao,
       resultado
     })
