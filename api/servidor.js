@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const express = require('express')
 const mongoose = require('mongoose')
@@ -6,7 +6,7 @@ const conectarNoBanco = require('./server/bancoDeDados')
 const controllerCalculadora = require('./server/controller/controllerCalculadora');
 
 
-const app = express() // Mover esta linha para cima, antes de definir as rotas
+const app = express();
 
 conectarNoBanco()
 
