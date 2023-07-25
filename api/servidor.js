@@ -2,13 +2,12 @@ require('dotenv').config()
 const express = require('express')
 const conectarNoBanco = require('./server/bancoDeDados')
 const controllerCalculadora = require('./server/controller/controllerCalculadora')
-const bodyParser = require('body-parser')
 const app = express()
 conectarNoBanco()
 
 app.use(express.json())
 
-app.use(bodyParser.json)
+
 
 //Rotas do serviço
 app.get('/calculadora', controllerCalculadora.index) //Retorna todos os calculos do banco de dados
