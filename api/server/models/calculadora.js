@@ -1,9 +1,12 @@
 const mongoose = require('mongoose')
 
+//Schema da calculadora: E`onde falamos quais os campos que teremos na calculadora
 const calculadoraSchema = new mongoose.Schema({
-  tipoDeOperacao: String,
-  expressao: String,
-  resultado: Number
+  num1: Number,
+  num2: Number,
+  operador: String,
+  resultado: Number,
+  tipoDeOperacao: String
 })
 
 module.exports = mongoose.model('calculadora', calculadoraSchema)
