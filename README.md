@@ -30,5 +30,4 @@ Antes de executar o projeto, certifique-se de ter o Node.js instalado em sua má
 
 ## Dependêcias
    - Express :  4.18.2
-   - Body-parser: 1.20.2
    - Mongoose : 7.4.0
