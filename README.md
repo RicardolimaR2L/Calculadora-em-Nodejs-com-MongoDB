@@ -8,7 +8,7 @@ A rota POST da API permite que o usuário envie uma requisição com dois númer
 
 - Num1: O primeiro número da operação.
 - Num2: O segundo número da operação.
-- Operation: O caractere de operação que representa a operação desejada no formato de string (por exemplo, "+", "-", "*", "/").
+- Operation : O caractere de operação que representa a operação desejada no formato de string (por exemplo, "+", "-", "*", "/").
 A API realizará a operação matemática com os números fornecidos, registrará no banco de dados o tipo da operação ("adicionar", "subtrair", "multiplicar", "dividir"), a fórmula da operação e obter o resultado.
 
 ### GET
@@ -18,7 +18,7 @@ A rota GET da API permite que o usuário obtenha todo o histórico de operaçõe
 
 - 1° Número  
 - 2° Número  
-- O sinal da operação realizada ("-", "-", "*", "/").
+- O sinal da operação realizada ("-", "+", "*", "/").
 
 - Resultado: O resultado obtido pela operação.
 
