@@ -3,7 +3,7 @@ Este é um projeto de uma calculadora com história, desenvolvida em Node.js, qu
 
 ## Funcionalidades
 
-### PUBLICAR
+### POST
 A rota POST da API permite que o usuário envie uma requisição com dois números e um caractere de operação para executar a operação desejada. Os parâmetros necessários para a requisição são os seguintes:
 
 - Num1: O primeiro número da operação.
@@ -11,7 +11,7 @@ A rota POST da API permite que o usuário envie uma requisição com dois númer
 - Operation: O caractere de operação que representa a operação desejada no formato de string (por exemplo, "+", "-", "*", "/").
 A API realizará a operação matemática com os números fornecidos, registrará no banco de dados o tipo da operação ("adicionar", "subtrair", "multiplicar", "dividir"), a fórmula da operação e obter o resultado.
 
-### PEGAR
+### GET
 A rota GET da API permite que o usuário obtenha todo o histórico de operações realizadas. Cada registro no histórico conterá as seguintes informações:
 
 - Id: Um identificador único para a operação no banco de dados.
